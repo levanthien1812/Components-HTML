@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Components</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+
+    <style>
+        /* #f59f00 */
+        h2 {
+            width: 700px;
+            margin: 1rem auto;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .accordion {
+            width: 700px;
+            padding: .6rem;
+            margin: 0px auto;
+            background-color: #eee;
+        }
+
+        .item {
+            padding: .5rem 1rem;
+            background-color: white;
+            box-shadow: #ccc 0px 0px 4px;
+            display: grid;
+            grid-template-columns: 1fr 10fr 40px;
+            align-items: center;
+            font-weight: 600;
+        }
+
+        .item + .item {
+            margin-top: .6rem;
+        }
+        
+        .item .number {
+            font-size: 30px;
+            color: #bcbcbc;
+            font-weight: 400;
+        }
+        
+        .item .arrow {
+            height: 40px;
+            padding: .5rem;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .item .arrow:hover {
+            background-color: #ddd;
+        }
+        
+        .item .arrow .expand-chevron {
+            width: 30px;
+            height: 30px;
+            transition: transform .4s ease;
+        }
+        
+        .item .body {
+            padding: 1rem 0;
+            font-size: 13px;
+            display: none;
+            grid-column: 2;
+        }
+        
+        .item .body p {
+            margin-bottom: .6rem;
+        }
+        
+        .item .body ul {
+            margin-left: 20px;
+        }
+        
+        .item .body ul li {
+            margin-bottom: .2rem;
+            color: #666;
+        }
+
+        .item.selected {
+            border-left: 3px solid #f59f00;
+        }
+
+        .item.selected > *:not(.item) {
+            color: #f59f00;
+        }
+
+        .item.selected .arrow .expand-chevron {
+            transform: rotate(90deg);
+        }
+
+        .item.selected .body {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h2>Accordion</h2>
+    <div class="accordion">
+        <div class="item">
+            <p class="number">01</p>
+            <p class="question">Where are these chairs assembled?</p>
+            <p class="arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="expand-chevron">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                </svg>
+            </p>
+            <div class="body">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium adipisci veniam vel sint, voluptates alias et aut harum vero at quod eveniet! Ipsa nisi possimus aliquam ullam quos fuga soluta!
+                </p>
+
+                <ul>
+                    <li>Velit, consequatur! Quidem sint quis quo blanditiis expedita</li>
+                    <li>Ab laudantium, labore esse corrupti doloremque expedita!</li>
+                    <li>Quos perferendis autem, nam molestias reprehenderit assumenda</li>
+                    <li>velit obcaecati aliquam ducimus nemo qui perspiciatis fugit earum quasi</li>
+                </ul>
+            </div>
+        </div>
+        <div class="item">
+            <p class="number">02</p>
+            <p class="question">Where are these chairs assembled?</p>
+            <p class="arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="expand-chevron">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                </svg>
+            </p>
+            <div class="body">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium adipisci veniam vel sint, voluptates alias et aut harum vero at quod eveniet! Ipsa nisi possimus aliquam ullam quos fuga soluta!
+                </p>
+
+                <ul>
+                    <li>Velit, consequatur! Quidem sint quis quo blanditiis expedita</li>
+                    <li>Ab laudantium, labore esse corrupti doloremque expedita!</li>
+                    <li>Quos perferendis autem, nam molestias reprehenderit assumenda</li>
+                    <li>velit obcaecati aliquam ducimus nemo qui perspiciatis fugit earum quasi</li>
+                </ul>
+            </div>
+        </div>
+        <div class="item">
+            <p class="number">03</p>
+            <p class="question">Where are these chairs assembled?</p>
+            <p class="arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="expand-chevron">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                </svg>
+            </p>
+            <div class="body">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium adipisci veniam vel sint, voluptates alias et aut harum vero at quod eveniet! Ipsa nisi possimus aliquam ullam quos fuga soluta!
+                </p>
+
+                <ul>
+                    <li>Velit, consequatur! Quidem sint quis quo blanditiis expedita</li>
+                    <li>Ab laudantium, labore esse corrupti doloremque expedita!</li>
+                    <li>Quos perferendis autem, nam molestias reprehenderit assumenda</li>
+                    <li>velit obcaecati aliquam ducimus nemo qui perspiciatis fugit earum quasi</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const items = document.querySelectorAll('.item')
+        Array.from(items).forEach(item => {
+            const arrow = item.querySelector('.arrow')
+            arrow.addEventListener('click', () => {
+                item.classList.toggle('selected')
+            })
+        })
+    </script>
+</body>
+</html>
