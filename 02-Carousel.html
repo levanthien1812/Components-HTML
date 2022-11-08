@@ -2,8 +2,8 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" testomonial="IE=edge" />
+        <meta name="viewport" testomonial="width=device-width, initial-scale=1.0" />
         <title>Carousel</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,140 +13,134 @@
         />
 
         <style>
-			
-			* {
-				box-sizing: border-box;
+            * {
+                box-sizing: border-box;
                 margin: 0;
                 padding: 0;
             }
-			h1 {
-				width: 700px;
-				margin: 2rem auto;
-			}
+            h1 {
+                width: 700px;
+                margin: 2rem auto;
+            }
 
             body {
                 font-family: "Poppins", sans-serif;
             }
 
-			.carousel {
-				width: 800px;
-				height: 250px;
-				margin: 0px auto;
-				background-color: #f59f00;
-				display: flex;
-				align-items: center;
-				border-radius: 10px;
-				position: relative;
-			}
+            .carousel {
+                width: 800px;
+                height: 250px;
+                margin: 0px auto;
+                background-color: #f59f00;
+                display: flex;
+                align-items: center;
+                border-radius: 10px;
+                position: relative;
+            }
 
-			button {
-				background-color: white;
-				border: none;
-				cursor: pointer;
-			}
+            button {
+                background-color: white;
+                border: none;
+                cursor: pointer;
+            }
 
-			.chevron {
-				padding: .4rem;
-				width: 40px;
-				height: 40px;
-				border-radius: 50%;
-				box-shadow: 0px 0px 10px rgba(17, 17, 17, 0.271);
-				flex-shrink: 0;
-				position: relative;
-				color: #aaa;
-			}
-			.chevron:hover svg{
-				color: #f59f00;
-			}
+            .chevron {
+                padding: 0.4rem;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                box-shadow: 0px 0px 10px rgba(17, 17, 17, 0.271);
+                flex-shrink: 0;
+                position: relative;
+                color: #aaa;
+            }
+            .chevron:hover svg {
+                color: #f59f00;
+            }
 
-			.prev-btn {
-				left: -20px;
-			}
-			.next-btn {
-				right: -20px;
-			}
+            .prev-btn {
+                left: -20px;
+            }
+            .next-btn {
+                right: -20px;
+            }
 
-			.body {
-				display: flex;
-				gap: 1.5rem;
-				position: relative;
-			}
-			.body img {
-				width: 280px;
-				border-radius: 10px;
-				box-shadow: 0 0 10px rgba(17, 17, 17, 0.322);
-			}
-			.body .content {
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-				gap: 1rem;
-			}
-			.body .content .title {
-				color: rgb(62, 62, 62);
-			}
-			.body .content .title .author {
-				font-weight: 600;
-				font-size: 13px;
-			}
-			.body .content .title .job {
-				font-size: 12px;
-			}
-			.body .learnmore-btn {
-				padding: .6rem 1.4rem;
-				font-size: 14px;
-				box-shadow: 0 0 5px rgba(17, 17, 17, 0.369);
-				position: absolute;
-				right: 0;
-				bottom: 40px;
-				border-radius: 5px;
-			}
-			.body .learnmore-btn:hover {
-				color: #f59f00;
-			}
+            .body {
+                display: flex;
+                gap: 1.5rem;
+                position: relative;
+            }
+            .body img {
+                width: 280px;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(17, 17, 17, 0.322);
+            }
+            .body .testomonial {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 1rem;
+            }
+            .body .testomonial .title {
+                color: rgb(62, 62, 62);
+            }
+            .body .testomonial .title .author {
+                font-weight: 600;
+                font-size: 13px;
+            }
+            .body .testomonial .title .job {
+                font-size: 12px;
+            }
+            .body .learnmore-btn {
+                background-color: rgba(255, 255, 255, 0.651);
+                padding: 0.6rem 1.4rem;
+                font-size: 14px;
+                box-shadow: 0 0 5px rgba(17, 17, 17, 0.369);
+                position: absolute;
+                right: 0;
+                bottom: 40px;
+                border-radius: 5px;
+            }
+            .body .learnmore-btn:hover {
+                background-color: #fff;
+                color: #f59f00;
+            }
 
-			.dots {
-				width: 100%;
-				display: flex;
-				justify-content: center;
-				position: absolute;
-				bottom: -45px;
-			}
-			.dots ul {
-				list-style: none;
-				display: flex;
+            .dots {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                position: absolute;
+                bottom: -45px;
 				gap: 10px;
-			}
-			.dots ul li svg {
-				width: 15px;
-			}
-			
+            }
+            .dots svg {
+                width: 15px;
+            }
         </style>
     </head>
 
     <body>
-		<h1>Carousel</h1>
+        <h1>Carousel</h1>
         <div class="carousel">
             <button class="chevron prev-btn">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-					<path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-				</svg>
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M15.75 19.5L8.25 12l7.5-7.5"
+                    />
+                </svg>
             </button>
             <div class="body">
-				<img src="/maria.jpg" alt="maria" />
-                <div class="content">
-                    <p class="text">
-                        "Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Doloribus dolores molestiae deserunt similique quod
-                        impedit temporibus. Sed doloribus reiciendis minus
-                        soluta, quibusdam assumenda"
-                    </p>
-					<div class="title">
-						<p class="author">Maria De Almeida</p>
-						<p class="job">Senior Product Manager at NPM commercial</p>
-					</div>
-                    <button class="learnmore-btn">Learn more</button>
-                </div>
+                
             </div>
             <button class="chevron next-btn">
                 <svg
@@ -164,32 +158,12 @@
                     />
                 </svg>
             </button>
-			<div class="dots">
-				<ul>
-					<li>
-						<svg xmlns="http://www.w3.org/2000/svg" fill="#f59f00" viewBox="0 0 24 24" stroke-width="3" stroke="#f59f00" class="w-6 h-6">
-							<path stroke-linecap="round" stroke-linejoin="round" d="M5.25 7.5A2.25 2.25 0 017.5 5.25h9a2.25 2.25 0 012.25 2.25v9a2.25 2.25 0 01-2.25 2.25h-9a2.25 2.25 0 01-2.25-2.25v-9z" />
-						</svg>
-					</li>
-					<li>
-						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="#f59f00" class="w-6 h-6">
-							<path stroke-linecap="round" stroke-linejoin="round" d="M5.25 7.5A2.25 2.25 0 017.5 5.25h9a2.25 2.25 0 012.25 2.25v9a2.25 2.25 0 01-2.25 2.25h-9a2.25 2.25 0 01-2.25-2.25v-9z" />
-						</svg>
-					</li>
-					<li>
-						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="#f59f00" class="w-6 h-6">
-							<path stroke-linecap="round" stroke-linejoin="round" d="M5.25 7.5A2.25 2.25 0 017.5 5.25h9a2.25 2.25 0 012.25 2.25v9a2.25 2.25 0 01-2.25 2.25h-9a2.25 2.25 0 01-2.25-2.25v-9z" />
-						</svg>
-					</li>
-					<li>
-						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="#f59f00" class="w-6 h-6">
-							<path stroke-linecap="round" stroke-linejoin="round" d="M5.25 7.5A2.25 2.25 0 017.5 5.25h9a2.25 2.25 0 012.25 2.25v9a2.25 2.25 0 01-2.25 2.25h-9a2.25 2.25 0 01-2.25-2.25v-9z" />
-						</svg>
-					</li>
-				</ul>
-			</div>
+            <div class="dots">
+                
+            </div>
         </div>
 
-        <script></script>
+        <script src="./02-Carousel.js"></script>
     </body>
 </html>
+
