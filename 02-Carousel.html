@@ -32,8 +32,6 @@
                 height: 250px;
                 margin: 0px auto;
                 background-color: #f59f00;
-                display: flex;
-                align-items: center;
                 border-radius: 10px;
                 position: relative;
             }
@@ -44,34 +42,40 @@
                 cursor: pointer;
             }
 
-            .chevron {
+            .control {
                 padding: 0.4rem;
                 width: 40px;
                 height: 40px;
                 border-radius: 50%;
                 box-shadow: 0px 0px 10px rgba(17, 17, 17, 0.271);
                 flex-shrink: 0;
-                position: relative;
+                position: absolute;
                 color: #aaa;
             }
-            .chevron:hover svg {
+            .control:hover svg {
                 color: #f59f00;
             }
-
             .prev-btn {
-                left: -20px;
+                top: 50%;
+                left: 0;
+                transform: translate(-50%, -50%);
             }
             .next-btn {
-                right: -20px;
+                top: 50%;
+                right: 0;
+                transform: translate(50%, -50%);
             }
 
             .body {
+                height: 100%;
                 display: flex;
+                align-items: center;
                 gap: 1.5rem;
                 position: relative;
+                padding: 16px 32px;
             }
             .body img {
-                width: 280px;
+                height: 130%;
                 border-radius: 10px;
                 box-shadow: 0 0 10px rgba(17, 17, 17, 0.322);
             }
@@ -97,7 +101,7 @@
                 font-size: 14px;
                 box-shadow: 0 0 5px rgba(17, 17, 17, 0.369);
                 position: absolute;
-                right: 0;
+                right: 32px;
                 bottom: 40px;
                 border-radius: 5px;
             }
@@ -129,7 +133,7 @@
     <body>
         <h1>Carousel</h1>
         <div class="carousel">
-            <button class="chevron prev-btn">
+            <button class="control prev-btn">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -148,7 +152,7 @@
             <div class="body">
                 
             </div>
-            <button class="chevron next-btn">
+            <button class="control next-btn">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"

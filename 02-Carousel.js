@@ -1,7 +1,7 @@
 const carouselBody = document.querySelector('.carousel .body')
 const dots = document.querySelector('.dots')
-const prevBtn = document.querySelector('.chevron.prev-btn')
-const nextBtn = document.querySelector('.chevron.next-btn')
+const prevBtn = document.querySelector('.control.prev-btn')
+const nextBtn = document.querySelector('.control.next-btn')
 
 const userData = [{
         image: "joanna.jpg",
