@@ -49,9 +49,9 @@ const generateBody = userData => {
 
 const fillDot = (index, isFill) => {
     if (isFill)
-        document.querySelectorAll('.dots svg')[index].setAttribute('fill', '#f59f00')
+        document.querySelectorAll('.dots .dot')[index].classList.add('fill')
     else 
-        document.querySelectorAll('.dots svg')[index].setAttribute('fill', 'none')
+        document.querySelectorAll('.dots .dot')[index].classList.remove('fill')
 }
 
 // Initialize body
@@ -61,21 +61,7 @@ carouselBody.innerHTML = generateBody(userData[index])
 // Generate dots
 const countUser = userData.length
 for (i = 0; i < countUser; i++) {
-    dots.innerHTML += `
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="3"
-            stroke="#f59f00"
-            class="w-6 h-6"
-        >
-            <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M5.25 7.5A2.25 2.25 0 017.5 5.25h9a2.25 2.25 0 012.25 2.25v9a2.25 2.25 0 01-2.25 2.25h-9a2.25 2.25 0 01-2.25-2.25v-9z"
-            />
-        </svg>`
+    dots.innerHTML += `<div class = "dot"> </div>`
 }
 
 fillDot(index, true)
