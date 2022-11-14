@@ -1,0 +1,222 @@
+:root {
+    --sale-color: #d83391;
+    --marketing-color: #2a8bf3;
+    --operations-color: #4dc2ae;
+    --talent-color: #f23d7c;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+button {
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+}
+
+a:link,
+a:hover,
+a:visited,
+a:focus {
+    text-decoration: none;
+    color: black;
+}
+
+.navbar {
+    display: grid;
+    grid-template-columns: 3fr 8fr;
+    background-color: #000515;
+    color: white;
+    padding: 0 10%;
+    position: relative;
+    height: 70px;
+}
+
+.navbar a {
+    color: white;
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-logo img {
+    width: 64px;
+}
+
+.navbar-logo .logo-name {
+    font-size: 28px;
+}
+
+.navbar-main {
+    display: grid;
+    grid-template-columns: 6fr 3fr;
+    align-items: center;
+}
+
+.navbar-menu{
+    height: 100%;
+}
+
+.navbar-menu > ul {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.navbar-menu-item {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-menu-item .title .has-sub-menu::after {
+    content: '';
+    background: url('https://www.zoominfo.com/icons/navigation/arrow-down-white.svg');
+    background-repeat: no-repeat;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    margin-left: 4px;
+}
+
+.sub-menu {
+    display: none;
+    background-color: white;
+    position: absolute;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.282);
+    border-radius: 15px;
+    padding: 25px;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.sub-menu * {
+    color: black;
+}
+
+.solutions .sub-menu {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 1.5rem;
+    width: 75%;
+}
+
+.navbar-menu-item:hover .sub-menu {
+    display: grid;
+} 
+
+.solutions .sub-menu-item-header {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    padding: .7rem;
+    border-radius: 10px;
+}
+
+.solutions .sub-menu-item-header img {
+    width: 32px;
+}
+
+.solutions .sub-menu-item-header span {
+    font-size: 1.2rem;
+}
+
+.solutions .sub-menu-item {
+    border: 1px solid rgba(170, 170, 170, 0.515);
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.solutions .sub-menu-item-body li {
+    border-radius: 3px;
+}
+
+.solutions .sub-menu-item-body li a {
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+    padding: .3rem .7rem;
+    margin: .3rem 0;
+}
+
+.solutions .sub-menu-item-body li span {
+    font-size: .8rem;
+}
+
+.solutions .sub-menu-item-header:hover,
+.solutions .sub-menu-item-body li:hover {
+    background-color: #cacaca2c;
+}
+
+.solutions .sales-os .sub-menu-item-body li:hover {
+    box-shadow: -.25rem 0 0 0 var(--sale-color);
+}
+.solutions .sales-os .sub-menu-item-body li:hover a span {
+    color: var(--sale-color);
+}
+.solutions .sales-os .sub-menu-item-body li:hover a svg path {
+    stroke: var(--sale-color);
+}
+.solutions .marketing-os .sub-menu-item-body li:hover {
+    box-shadow: -.25rem 0 0 0 var(--marketing-color);
+}
+.solutions .marketing-os .sub-menu-item-body li:hover a span {
+    color: var(--marketing-color);
+}
+.solutions .marketing-os .sub-menu-item-body li:hover a svg path {
+    stroke: var(--marketing-color);
+}
+.solutions .operations-os .sub-menu-item-body li:hover {
+    box-shadow: -.25rem 0 0 0 var(--operations-color);
+}
+.solutions .operations-os .sub-menu-item-body li:hover a span {
+    color: var(--operations-color);
+}
+.solutions .operations-os .sub-menu-item-body li:hover a svg path {
+    stroke: var(--operations-color);
+}
+.solutions .talent-os .sub-menu-item-body li:hover {
+    box-shadow: -.25rem 0 0 0 var(--talent-color);
+}
+.solutions .talent-os .sub-menu-item-body li:hover a span {
+    color: var(--talent-color);
+}
+.solutions .talent-os .sub-menu-item-body li:hover a svg path {
+    stroke: var(--talent-color);
+}
+
+
+
+.navbar-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.navbar-login > a {
+    display: inline-block;
+}
+
+.signup-btn {
+    padding: 8px 24px;
+    background-color: #ff6a00;
+    border-radius: 20px;
+}
+
